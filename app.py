@@ -1,7 +1,5 @@
 import os
 import streamlit as st
-import textwrap
-from pprint import pprint
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import PromptTemplate, ChatPromptTemplate, HumanMessagePromptTemplate
 from langchain.output_parsers import StructuredOutputParser, ResponseSchema
@@ -119,16 +117,26 @@ class DebateJudge:
         ]
         evaluation_clean = {key: evaluation[key] for key in key_order}
         for key, value in evaluation_clean.items():
-            print(f"{key} : {textwrap.fill(value, 100)}")
+            st.markdown(f"**{key}:** {value}")
 
 # Streamlit UI
 st.title("LLM Simulated Debate")
 
+# Get API keys 
 openai_api_key = st.text_input("Enter your OpenAI API Key:", type="password")
 together_api_key = st.text_input("Enter your TogetherAI API Key:", type="password")
 
-os.environ['OPENAI_API_KEY'] = openai_api_key
-os.environ['TOGETHER_API_KEY'] = together_api_key
+# Check if at least one API key is provided
+if not openai_api_key and not together_api_key:
+    st.error("Please enter at least one API key (OpenAI or TogetherAI) to proceed.")
+
+else:
+    # Set environment variables
+    if openai_api_key:
+        os.environ['OPENAI_API_KEY'] = openai_api_key
+
+    if together_api_key:
+        os.environ['TOGETHER_API_KEY'] = together_api_key
 
 model_options = [
     {"name": "GPT-3.5-turbo", "model_name": "gpt-3.5-turbo"},
@@ -209,7 +217,7 @@ if st.session_state.get('proposition_selected', False) and st.button("Run Debate
             for participant in participants:
                 participant_argument = participant.present_argument(proposition)
                 st.write(f"{participant.name}'s argument:")
-                st.write(textwrap.fill(participant_argument.content, 100))
+                st.markdown(participant_argument.content)
 
                 for judge in judges:
                     judge_evaluation = judge.evaluate_argument(proposition, participant.name, participant_argument.content)
