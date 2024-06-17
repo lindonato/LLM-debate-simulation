@@ -2,7 +2,7 @@ import os
 import streamlit as st
 import textwrap
 from pprint import pprint
-from langchain import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain_core.prompts import PromptTemplate, ChatPromptTemplate, HumanMessagePromptTemplate
 from langchain.output_parsers import StructuredOutputParser, ResponseSchema
 import pandas as pd
