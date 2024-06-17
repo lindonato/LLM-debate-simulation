@@ -142,8 +142,11 @@ model_options = [
     {"name": "GPT-3.5-turbo", "model_name": "gpt-3.5-turbo"},
     {"name": "GPT-4o", "model_name": "gpt-4o"},
     {"name": "Llama3-70B", "model_name": "meta-llama/Llama-3-70b-chat-hf", "api_key": together_api_key, "base_url": "https://api.together.xyz/v1"},
+    {"name": "Llama3-8B", "model_name": "meta-llama/Llama-3-8b-chat-hf", "api_key": together_api_key, "base_url": "https://api.together.xyz/v1"},
     {"name": "Mixtral 8x7B instruct", "model_name": "mistralai/Mixtral-8x7B-Instruct-v0.1", "api_key": together_api_key, "base_url": "https://api.together.xyz/v1"},
-    {"name": "Llama3-8B", "model_name": "meta-llama/Llama-3-8b-chat-hf", "api_key": together_api_key, "base_url": "https://api.together.xyz/v1"}
+    {"name": "Qwen 2 72B Instruct", "model_name": "Qwen/Qwen2-72B-Instruct", "api_key": together_api_key, "base_url": "https://api.together.xyz/v1"},
+    {"name": "Qwen 1.5 72B", "model_name": "Qwen/Qwen1.5-72B", "api_key": together_api_key, "base_url": "https://api.together.xyz/v1"},
+    {"name": "Phi-2 2.7B", "model_name": "microsoft/phi-2", "api_key": together_api_key, "base_url": "https://api.together.xyz/v1"}
 ]
 
 num_participants = st.number_input("Select number of participants:", min_value=1, max_value=3, value=2)
