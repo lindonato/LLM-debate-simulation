@@ -1,7 +1,7 @@
 # LLM Debate Simulation
 Ever wanted to stage a debate between LLMs?
 
-This streamlit + langchain based mini-app pits LLMs against each other in a simulated debased based on a topic of your choosing. The live app is here [https://llm-debate-sim.streamlit.app/](https://llm-debate-sim.streamlit.app/)
+This streamlit + langchain based mini-app pits LLMs against each other in a simulated debate based on a topic of your choosing. The live app is here [https://llm-debate-sim.streamlit.app/](https://llm-debate-sim.streamlit.app/)
 
 You will need to bring your own API keys for OpenAI and TogetherAI.
 
@@ -20,7 +20,7 @@ Costs for model inference on Together AI can be found [here](https://api.togethe
 
 Costs for model inference on OpenAI can be found [here](https://openai.com/api/pricing/)
 
-# Steps to run the simulation.
+# Steps to run the simulation
 
 1) Input your OpenAI and/or TogetherAI API keys.
 
