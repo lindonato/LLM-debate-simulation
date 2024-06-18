@@ -5,14 +5,14 @@ This is a streamlit + langchain based mini-app that pits LLMs against each other
 
 You will need to bring your own API keys and the models that you can select from include
 
-GPT 4o
-GPT 3.5-Turbo
-LlaMA3 - 70B
-LlaMA3 - 8B
-Mixtral Instruct - 8X22B 
-Mixtral Instruct - 8X7B 
-Qwen 2 Instruct - 72B
-Qwen 1.5 Chat - 72B
+GPT 4o<br/>
+GPT 3.5-Turbo<br/>
+LlaMA3 - 70B<br/>
+LlaMA3 - 8B<br/>
+Mixtral Instruct - 8X22B<br/>
+Mixtral Instruct - 8X7B<br/>
+Qwen 2 Instruct - 72B<br/>
+Qwen 1.5 Chat - 72B<br/>
 
 Costs for model inference on Together AI can be found [here](https://api.together.ai/models)
 
