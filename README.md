@@ -20,7 +20,7 @@ Costs for model inference on Together AI can be found [here](https://api.togethe
 
 Costs for model inference on OpenAI can be found [here](https://openai.com/api/pricing/)
 
-#Steps to run the simulation.
+# Steps to run the simulation.
 
 1) Input your OpenAI and/or TogetherAI API keys.
 
