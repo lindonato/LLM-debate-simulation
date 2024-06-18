@@ -1,9 +1,11 @@
 # LLM Debate Simulation
-Ever wanted to stage a debate between LLMs? This python based debate simulation allows you to have your favorite models battle it out on thought provoking topics.
+Ever wanted to stage a debate between LLMs?
 
-This is a streamlit + langchain based mini-app that pits LLMs against each other in a simulated debased based on a topic of your choosing. The live app is here [https://llm-debate-sim.streamlit.app/](https://llm-debate-sim.streamlit.app/)
+This streamlit + langchain based mini-app pits LLMs against each other in a simulated debased based on a topic of your choosing. The live app is here [https://llm-debate-sim.streamlit.app/](https://llm-debate-sim.streamlit.app/)
 
-You will need to bring your own API keys and the models that you can select from include
+You will need to bring your own API keys for OpenAI and TogetherAI.
+
+The models that you can select from include:
 
 GPT 4o<br/>
 GPT 3.5-Turbo<br/>
